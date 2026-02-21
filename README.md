@@ -30,6 +30,52 @@
 - SQLite (пользователи, визиты, заметки)
 - Генерация QR (`qrcode` + Pillow)
 
+## Если вы совсем с нуля (пошагово, очень просто)
+
+1. **Создайте бота в Telegram через @BotFather**
+   - Откройте Telegram -> найдите `@BotFather`.
+   - Отправьте `/start`, затем `/newbot`.
+   - Придумайте имя и username (username должен заканчиваться на `bot`, например `tea_kitsune_demo_bot`).
+   - BotFather пришлёт токен вида `123456:ABC...` — сохраните его.
+
+2. **Откройте проект в VS Code**
+   - Нажмите `File -> Open Folder...`.
+   - Выберите папку, где лежат `README.md`, `bot.py`, `requirements.txt`.
+
+3. **Откройте терминал в VS Code**
+   - Нажмите `Terminal -> New Terminal`.
+   - Команды ниже вводите именно в этом терминале (не в чате).
+
+4. **Запустите команды (Windows PowerShell)**
+
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   copy .env.example .env
+   notepad .env
+   ```
+
+5. **Заполните `.env` и сохраните**
+
+   ```env
+   BOT_TOKEN=ВСТАВЬ_СЮДА_ТОКЕН_ОТ_BOTFATHER
+   ADMIN_IDS=123456789
+   DB_PATH=tea_kitsune.db
+   ```
+
+6. **Запустите бота**
+
+   ```powershell
+   python bot.py
+   ```
+
+7. **Проверьте в Telegram**
+   - Откройте своего бота.
+   - Нажмите `Start` или отправьте `/start`.
+
+> Если бот не отвечает, сначала проверьте, что токен в `.env` корректный и что в терминале нет ошибок.
+
 ## Быстрый запуск
 
 ```bash
