@@ -41,6 +41,22 @@ cp .env.example .env
 python bot.py
 ```
 
+### Быстрый запуск в Windows (PowerShell)
+
+Если вы работаете в `PS C:\...>`, используйте команды ниже:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+copy .env.example .env
+# заполните BOT_TOKEN и ADMIN_IDS
+python bot.py
+```
+
+Если вы получили проект архивом и в текущей папке нет `README.md`, `bot.py`, `requirements.txt`,
+сначала откройте в VS Code именно папку проекта: `File -> Open Folder...`.
+
 ## Переменные окружения
 
 Создайте `.env`:
